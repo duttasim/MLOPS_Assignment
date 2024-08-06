@@ -12,7 +12,7 @@ def client():
 
 
 def test_predict(client):
-    test_data = {'features': [3.1, 4.2, 3.0, 3.5]}
+    test_data = {'features': [0, 80, 0, 1, 3, 25, 6, 140]}
     response = client.post('/predict', data=json.dumps(test_data),
                            content_type='application/json')
     assert response.status_code == 200
