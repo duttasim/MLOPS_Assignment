@@ -8,7 +8,7 @@ from utils import load_data, save_model
 print("MLFlow Version = "+mlflow.__version__)
 
 
-X, y = load_data('diabetes.csv')
+X, y = load_data('../data_git/diabetes.csv')
 
 
 def objective(trial):

@@ -1,11 +1,15 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 import joblib
 import numpy as np
 
 # Initialize Flask applications
 app = Flask(__name__)
 
-knn_model = joblib.load('./knn_model.joblib')
+knn_model = joblib.load('./src/models/best_model.pkl')
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 
 @app.route('/predict', methods=['POST'])

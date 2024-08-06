@@ -9,4 +9,4 @@ df = pd.DataFrame(data=diabetes.data, columns=diabetes.feature_names)
 df['target'] = diabetes.target
 
 # Save DataFrame to CSV
-df.to_csv('data_git/diabetes.csv', index=False)
+df.to_csv('../data_git/diabetes.csv', index=False)

@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/ui5-test/MLOPS_Assignment/src/mlruns/0/78316264d39e4c71a20827d0314feb57/artifacts
+end_time: 1722966706707
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 78316264d39e4c71a20827d0314feb57
+run_name: Hyperparameter Tuning Run
+run_uuid: 78316264d39e4c71a20827d0314feb57
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722965119416
+status: 3
+tags: []
+user_id: Simran Dutta
