@@ -19,4 +19,3 @@ for column in ['gender', 'smoking_history']:
 
 data.rename(columns={'diabetes': 'target'}, inplace=True)
 pd.DataFrame(data).to_csv('../data_git/diabetes.csv', index=False)
-
