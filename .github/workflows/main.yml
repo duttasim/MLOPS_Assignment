@@ -11,13 +11,13 @@ on:
       - feature-branch
 
 jobs:
-  code-checkout:
+  checkout-code:
     runs-on: ubuntu-latest
     steps:
       - name: Retrieve Code
         uses: actions/checkout@v2
 
-  python-setup:
+  setup:
     runs-on: ubuntu-latest
     needs: code-checkout
     steps:
@@ -43,7 +43,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-  code-lint:
+  lint:
     runs-on: ubuntu-latest
     needs: dependencies-install
     steps:
@@ -64,7 +64,7 @@ jobs:
           pip install flake8
           flake8 src
 
-  run-tests:
+  tests:
     runs-on: ubuntu-latest
     needs: code-lint
     steps:
@@ -85,7 +85,7 @@ jobs:
           pip install pytest flask-testing
           pytest
 
-  docker-deploy:
+  deploy:
     runs-on: ubuntu-latest
     needs: run-tests
     steps:
