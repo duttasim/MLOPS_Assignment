@@ -11,7 +11,7 @@ on:
       - feature-branch
 
 jobs:
-  checkout-code:
+  code-checkout:
     runs-on: ubuntu-latest
     steps:
       - name: Retrieve Code
@@ -66,7 +66,7 @@ jobs:
 
   tests:
     runs-on: ubuntu-latest
-    needs: code-lint
+    needs: lint
     steps:
       - name: Retrieve Code
         uses: actions/checkout@v2
@@ -87,7 +87,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: run-tests
+    needs: tests
     steps:
       - name: Retrieve Code
         uses: actions/checkout@v2
